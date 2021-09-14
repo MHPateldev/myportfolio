@@ -1,0 +1,178 @@
+@import "../../global.scss";
+
+.intro {
+  background-color: $bgColor;
+  display: flex;
+
+  @include mobile{
+    flex-direction: column;
+    align-items: center;
+    .left{
+      flex:1;
+      .imgContainer{
+        width: 100%;
+      }
+    } 
+  }
+
+  .left {
+    flex: 0.5;
+    overflow: hidden;
+
+    .imgContainer {
+      width: 700px;
+      height: 700px;
+      background-color: rgba(255, 0, 0, 0.849);
+      border-radius: 50%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      float: right;
+
+      @include mobile{
+        align-items: flex-start;
+        background-color: transparent;
+      }
+
+      img {
+        height: 90%;
+
+        @include mobile{
+          height: 100%;
+        }
+      }
+    }
+  }
+  .right {
+    flex: 0.5;
+    position: relative;
+    margin: 0 1.5em;
+    
+
+    .wrapper {
+      width: 100%;
+      height: 100%;
+      padding-left: 50px;
+      display: flex;
+      padding: 0 1em;
+      flex-direction: column;
+      justify-content: center;
+        
+      @include mobile{
+        padding-left: 0;
+        align-items: center;
+        height: 64%;
+      }
+
+      >*{
+        span{
+          font-family: 'Anonymous Pro', monospace;
+        }
+      }
+
+      h1 {
+        font-size: 40px;
+        font-weight: 700;
+
+        @include mobile{
+          font-size: 40px;
+          font-weight: 700;
+        }
+        .ityped-cursor {
+          animation: blink 0.8s infinite;
+        }
+  
+        @keyframes blink {
+            50%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0;
+            }
+        }
+      }
+      h2 {
+        font-size: 35px;
+        font-weight: 400;
+
+        .ityped-cursor {
+          animation: blink 0.8s infinite;
+        }
+  
+        @keyframes blink {
+            50%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0;
+            }
+        }
+      }
+      h3 {
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 1.8em;
+
+        @include mobile{
+          font-size: 20px;
+        }
+
+        .ityped-cursor {
+          animation: blink 0.8s infinite;
+        }
+  
+        @keyframes blink {
+            50%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0;
+            }
+          }
+      }
+
+      h4 {
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 1.5em;
+
+        @include mobile{
+          font-size: 20px;
+        }
+
+        .ityped-cursor {
+          animation: blink 0.8s infinite;
+        }
+  
+        @keyframes blink {
+            50%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0;
+            }
+          }
+      }
+    }
+    a {
+      position: absolute;
+      bottom: 10px;
+      left: 40%;
+
+      img {
+        width: 30px;
+        animation: arrowBlink 2s infinite;
+      }
+
+      @keyframes arrowBlink {
+        100% {
+          opacity: 0;
+        }
+      }
+
+      @include mobile{
+        left:50%;
+      }
+    }
+  }
+}

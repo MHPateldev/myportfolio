@@ -1,0 +1,10 @@
+$mainColor: #15023a;
+$bgColor: rgb(255, 255, 255);
+
+$width: 908px;
+
+@mixin mobile {
+    @media (max-width: #{$width}){
+        @content
+    }
+}
